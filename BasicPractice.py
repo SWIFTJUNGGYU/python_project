@@ -75,9 +75,61 @@ print(lang[:])   # 문자열의 제일 처음부터 끝까지 슬라이스
 
 print("-----------------------------------")
 
-# 여러줄의 문자열을 변수로 진행할 때
+# 여러줄의 문자열의 변수선언 방법
 multiStr = '''파이썬은
 영어로
 Python'''
 
 print(multiStr)
+
+print("-----------------------------------")
+
+# 출력방법 5가지
+python = '파이썬'
+java = '자바'
+C = 'C언어'
+C_sharp = 'c#'
+
+print(python + ' ' + java)  #파이썬 자바
+
+print(python, java)         #파이썬 자바
+
+print('요즘 대세 개발언어 2종류는 {}과 {}입니다.'.format(python,java))
+
+print('{2}와{3} 같은 언어는 불편하고 어려워요. {0}이 최고입니다.'.format(python,java,C,C_sharp))
+
+print(f'개발언어 중 {python}부터 공부하고 {java}를 공부하세요.')
+
+print("-----------------------------------")
+
+# 리스트
+dev_list = ['파이썬','자바','플러터','C','C','C']    # 리스트는 중복데이터 허용
+
+multi_list = [10,3.14,'Number',True,False]         # 여러 종류의 데이터 한꺼번에 허용
+
+empty_list = []                                     # 빈 리스트 허용
+
+# 리스트 출력
+print(dev_list[1])  # 자바
+'''리스트 안에 있는 값들은 순서가 보장되어 있음.'''
+
+# 리스트 슬라이스
+print(multi_list[0:4])  # [10,3.14,'Number',True]
+
+# 리스트에 포함된 데이터 확인 = Boolean 값
+print('C' in dev_list)  # True
+
+# 리스트 안의 데이터 갯수 확인
+print(len(dev_list))    # 6
+
+# 리스트 데이터 추가
+dev_list.append('javaScript')
+print(dev_list)         # ['파이썬','자바','플러터','C','C','C','javascript']
+
+# 리스트 데이터 삭제
+dev_list.remove('플러터')
+print(dev_list)         # ['파이썬','자바','C','C','C','javascript']
+
+print("-----------------------------------")
+
+#튜플
