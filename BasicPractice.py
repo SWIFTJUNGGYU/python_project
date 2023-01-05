@@ -1,4 +1,4 @@
-print("--------- Basic Practice ----------")
+print("--------- Basic Practice ----------\n")
 
 # 문자자료형
 print('Hello World')
@@ -13,7 +13,7 @@ print(True)
 print(False)
 '''꼭 앞글자는 대문자로 되어야한다'''
 
-print("-----------------------------------")
+print("-----------------------------------\n")
 
 # 변수
 variableTxt = 'Text 변수'
@@ -37,7 +37,7 @@ print(var_1)
 print(Var)
 print(VAR)
 
-print("-----------------------------------")
+print("-----------------------------------\n")
 
 # 형변환
 # 문자형 → 정수형
@@ -59,7 +59,7 @@ print(numFloat)
 print(strNum)
 print(numFloatInt)
 
-print("-----------------------------------")
+print("-----------------------------------\n")
 
 # 문자열 인덱스
 lang = 'PYTHON'
@@ -73,7 +73,7 @@ print(lang[2:])  # 문자열 2번째부터 끝까지의 문자열 슬라이스
 print(lang[:4])  # 문자열 제일 첫번째부터 4번째 직전까지의 문자열 슬라이스
 print(lang[:])   # 문자열의 제일 처음부터 끝까지 슬라이스
 
-print("-----------------------------------")
+print("-----------------------------------\n")
 
 # 여러줄의 문자열의 변수선언 방법
 multiStr = '''파이썬은
@@ -82,7 +82,7 @@ Python'''
 
 print(multiStr)
 
-print("-----------------------------------")
+print("-----------------------------------\n")
 
 # 출력방법 5가지
 python = '파이썬'
@@ -100,7 +100,7 @@ print('{2}와{3} 같은 언어는 불편하고 어려워요. {0}이 최고입니
 
 print(f'개발언어 중 {python}부터 공부하고 {java}를 공부하세요.')
 
-print("-----------------------------------")
+print("-----------------------------------\n")
 
 # 리스트
 dev_list = ['파이썬','자바','플러터','C','C','C']    # 리스트는 중복데이터 허용
@@ -130,6 +130,67 @@ print(dev_list)         # ['파이썬','자바','플러터','C','C','C','javascr
 dev_list.remove('플러터')
 print(dev_list)         # ['파이썬','자바','C','C','C','javascript']
 
-print("-----------------------------------")
+print("-----------------------------------\n")
 
-#튜플
+# 튜플
+'''리스트와 달리 한번 지정 후 수정할 수 없다'''
+'''읽기전용 리스트'''
+dev_tuple = ('파이썬', '플러터', '자바')
+print(dev_tuple)        # ('파이썬', '플러터', '자바')
+
+# 튜플 언패킹
+'''지정된 튜플을 다른 변수로 풀어놓는 것'''
+number_tuple = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+(one, two, *others, nine, ten) = number_tuple
+
+print(one)              # 1
+print(two)              # 2
+print(others)           # [3, 4, 5, 6, 7, 8] *표시된 변수는 나머지 값들의 리스트로 지정된다.
+print(nine)             # 9
+print(ten)              # 10
+
+print("-----------------------------------\n")
+
+# 세트
+'''데이터의 중복허용X, 순서X'''
+
+num_set = {8,1,6,2,3,4,4,0,5,2,6,1,8}
+print(num_set)          # {0, 1, 2, 3, 4, 5, 6, 8}
+
+num_set.add(9)
+print(num_set)          # {0, 1, 2, 3, 4, 5, 6, 8, 9}
+
+num_set.remove(5)
+print(num_set)          # {0, 1, 2, 3, 4, 6, 8, 9}
+
+num_set.clear()
+print(num_set)          # set()
+
+del num_set
+#print(num_set)          # 완전삭제 Error: 'num_set' is not defined
+
+print("-----------------------------------\n")
+
+# 딕셔너리
+'''key와value의 조합'''
+'''{key1:value1, key2:value2...}'''
+
+son_7 = {
+    'name':'Son heung min',
+    'age': 31,
+    'height': 180,
+    'kick': 'Right&Left',
+    'club': 'TOT',
+    'color': 'White'
+}
+
+# 딕셔너리 값 확인
+print(son_7['name'])      # Son heung min
+print(son_7['age'])       # 31
+print(son_7.get('height'))# 180
+
+# 딕셔너리 값 추가
+son_7['grade'] = 'high school'
+print(son_7.get('grade'))# High school
+
+print("-----------------------------------\n")
