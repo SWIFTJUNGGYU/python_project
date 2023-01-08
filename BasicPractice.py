@@ -194,3 +194,40 @@ son_7['grade'] = 'high school'
 print(son_7.get('grade'))# High school
 
 print("-----------------------------------\n")
+
+# 튜플 ↔ 리스트 형변환
+'''추가, 수정, 제거가 되지않는 튜플에 
+   이와 같은 기능을 가능하게 만드는 방법'''
+
+var_tuple = ('A', 'B', 'C')
+var_list = list(var_tuple)              # 튜플을 추가, 수정, 제거가 가능한 리스트로 형변환
+var_list.append('D')
+var_tuple = tuple(var_list)
+
+print(var_tuple)                        # ('A', 'B', 'C', 'D')
+
+print("-----------------------------------\n")
+
+# 리스트 ↔ 세트 형변환
+'''중복값이 포함된 리스트의 중복값을 제거하는 방법1'''
+
+var_list = ['A', 'B', 'C', 'B', 'A']
+var_set = set(var_list)                 # 세트는 중복값을 허용하지 않기 때문에 리스트에 포함된 중복값 제거
+var_list = list(var_set)
+print(var_list)                         # ['B', 'A', 'C']
+
+'''세트 개념은 순서도 값의 순서도 보장하지 않기 때문에
+리스트 데이터의 순서가 섞일 수 있다.'''
+
+print("-----------------------------------\n")
+
+# 리스트 ↔ 딕셔너리 형변환
+'''중복값이 포함된 리스트의 중복값을 제거하는 방법2 (순서 보장)'''
+
+var_list = ['A', 'B', 'C', 'C', 'B']
+var_dic = dict.fromkeys(var_list)       # 딕셔너리는 중복값을 허용하지 않고 순서를 보장함
+
+print(var_dic)                          # {'A':None, 'B':None, 'C':None}
+
+var_list = list(var_dic)
+print(var_list)                         #['A', 'B', 'C']
